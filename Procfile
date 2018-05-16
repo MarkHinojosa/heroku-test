@@ -1,2 +1,2 @@
-
-client: cd client && npm start && cd ..
+server: yarn server
+client: cd client && yarn start && cd ..
