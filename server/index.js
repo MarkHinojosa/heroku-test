@@ -8,8 +8,7 @@ app.get("/test", function(req, res, next) {
   res.send({ express: "testing api production again" });
 });
 
-app.listen(5000, err => {
-  if (err) {
-    return console.log("nope", err);
-  }
+const port = process.env.PORT || 5001;
+app.listen(port, () => {
+  console.log(`Listening on port:${port}`);
 });
