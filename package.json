@@ -5,7 +5,6 @@
     "node": "8.10.0"
   },
   "scripts": {
-    "client": "cd client && yarn start",
     "server": "node bin/prod",
     "devServer": "nodemon bin/dev",
     "clean": "rm -rf dist",
@@ -14,7 +13,8 @@
     "build": "npm run clean && mkdir dist && babel server -s -d dist",
     "production":
       "yarn build && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "node ./dist/index"
+    "start": "node ./dist/index",
+    "client": "cd client && npm start && cd .."
   },
   "dependencies": {
     "express": "^4.16.2"
