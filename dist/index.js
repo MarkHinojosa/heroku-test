@@ -17,9 +17,8 @@ app.get("/test", function (req, res, next) {
   res.send({ express: "testing api production again" });
 });
 
-app.listen(5000, function (err) {
-  if (err) {
-    return console.log("nope", err);
-  }
+var port = process.env.PORT || 5000;
+app.listen(port, function () {
+  console.log("Listening on port :" + port);
 });
 //# sourceMappingURL=index.js.map
