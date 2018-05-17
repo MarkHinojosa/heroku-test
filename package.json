@@ -14,7 +14,8 @@
     "production":
       "yarn build && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node ./dist/index",
-    "client": "cd client && yarn start && cd .."
+    "client": "cd client && yarn start && cd ..",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
   "dependencies": {
     "express": "^4.16.2"
