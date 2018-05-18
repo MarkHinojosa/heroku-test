@@ -14,7 +14,7 @@ var app = (0, _express2.default)();
 (0, _test2.default)("logging test production again");
 
 app.get("/test", function (req, res, next) {
-  res.send({ express: "testing api production again" });
+  res.send({ express: "testing api production again blah" });
 });
 
 var port = process.env.PORT || 5000;
