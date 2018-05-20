@@ -6,7 +6,7 @@ const app = express();
 test("logging test production again");
 
 app.get("/test", function(req, res, next) {
-  res.send({ express: "testing api production again blah" });
+  res.send({ express: "testing api production on heroku" });
 });
 
 // Serve static files from the React app
@@ -16,10 +16,6 @@ app.use(express.static(path.join("client/build")));
 // match one above, send back React's index.html file.
 app.get("*", (req, res) => {
   res.sendFile(path.join("/client/build/index.html"));
-});
-
-app.get("/", function(req, res, next) {
-  res.send({ default: "default" });
 });
 
 const port = process.env.PORT || 5000;
