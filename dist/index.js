@@ -10,6 +10,8 @@ var _express2 = _interopRequireDefault(_express);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var path = require("path");
+
 var app = (0, _express2.default)();
 (0, _test2.default)("logging test production again");
 
@@ -24,6 +26,10 @@ app.use(_express2.default.static(path.join(__dirname, "client/build")));
 // match one above, send back React's index.html file.
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
+app.get("/", function (req, res, next) {
+  res.send({ default: "default" });
 });
 
 var port = process.env.PORT || 5000;

@@ -1,5 +1,6 @@
 import test from "./test";
 import express from "express";
+const path = require("path");
 
 const app = express();
 test("logging test production again");
