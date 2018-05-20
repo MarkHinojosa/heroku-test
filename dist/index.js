@@ -11,7 +11,6 @@ var _express2 = _interopRequireDefault(_express);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var path = require("path");
-heroku;
 
 var app = (0, _express2.default)();
 (0, _test2.default)("logging test production again");
