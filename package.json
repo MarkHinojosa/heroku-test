@@ -15,7 +15,7 @@
       "yarn build && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node ./dist/index",
     "client": "cd client && yarn start && cd ..",
-    "heroku-postbuild": "cd client && yarn && yarn run build",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "eslint.packageManager": "yarn"
   },
   "dependencies": {
