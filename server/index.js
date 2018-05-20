@@ -1,6 +1,7 @@
 import test from "./test";
 import express from "express";
 const path = require("path");
+heroku;
 
 const app = express();
 test("logging test production again");
@@ -10,12 +11,12 @@ app.get("/test", function(req, res, next) {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join("client/build")));
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+  res.sendFile(path.join("/client/build/index.html"));
 });
 
 app.get("/", function(req, res, next) {
