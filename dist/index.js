@@ -20,6 +20,12 @@ app.get("/test", function (req, res, next) {
 // Serve static files from the React app
 app.use(_express2.default.static(path.join(__dirname, "client/build")));
 
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
   console.log("Listening on port :" + port);
