@@ -17,6 +17,9 @@ app.get("/test", function (req, res, next) {
   res.send({ express: "testing api production again blah" });
 });
 
+// Serve static files from the React app
+app.use(_express2.default.static(path.join(__dirname, "client/build")));
+
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
   console.log("Listening on port :" + port);
