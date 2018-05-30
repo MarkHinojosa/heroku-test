@@ -19,7 +19,7 @@ Allows you to run multiple commands concurrently.
 
 Available Root Commands:
 
-_may substitute "yarn" for "npm run"_
+may substitute "yarn" for "npm run"
 
 * "npm run devServer" - runs API with Nodemon & Babel
 
