@@ -2,7 +2,7 @@ This is an attempt to deploy the react-express-babel app.. the following is from
 
 This living project is an example on how to get a React client, and a Node.js server to run.. This requires the running of both the client server and the api server "concurrently". Use the "dev" options to create a devoloper environment and the "production" option when ready to build the API code for production. The tools used in this project are React.js, Express.js, Babel-Register, Babel-CLI, Nodemon, Yarn and the Concurrently NPM package.
 
-What is React ? test
+What is React ?
 React is a declarative, efficient, and flexible JavaScript library for building user interfaces.
 
 What is Express.js ?
